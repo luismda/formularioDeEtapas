@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Cadastro de usuário</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div id="progress-container">
+        <div class="progress-stage">
+            <span class="bi bi-person-fill progress-icon stage-complete"></span>
+            <span class="progress-text">Dados</span>
+        </div>
+        <div class="progress-stage">
+            <span class="bi bi-house-fill progress-icon"></span>
+            <span class="progress-text">Endereço</span>
+        </div>
+        <div class="progress-stage">
+            <span class="bi bi-lock-fill progress-icon"></span>
+            <span class="progress-text">Login</span>
+        </div>
+        <span id="bar"></span>
+    </div>
+
+    <form id="form-container">
+        <div id="slide">
+            <div class="stage">
+                <h2>Dados pessoais</h2>
+                <p>Seus dados</p>
+    
+                <input type="text" name="name" placeholder="Nome">
+                <input type="email" name="email" placeholder="E-mail">
+                <input type="text" name="phone" placeholder="Telefone">
+    
+                <div class="actions">
+                    <button id="next-btn-1">Próximo</button>
+                </div>
+            </div>
+            <div class="stage">
+                <h2>Endereço residencial</h2>
+                <p>Seu endereço</p>
+    
+                <div class="group">
+                    <input type="text" name="street" placeholder="Rua">
+                    <input type="number" name="number" placeholder="N°">
+                </div>
+                <input type="text" name="district" placeholder="Bairro">
+                <div class="group">
+                    <input type="text" name="city" placeholder="Cidade">
+                    <input type="text" name="cep" placeholder="CEP">
+                </div>
+    
+                <div class="actions">
+                    <button id="back-btn-1">Anterior</button>
+                    <button id="next-btn-2">Próximo</button>
+                </div>
+            </div>
+            <div class="stage">
+                <h2>Dados de acesso</h2>
+                <p>Seu login</p>
+    
+                <input type="text" name="username" placeholder="Nome de usuário">
+                <input type="password" name="password" placeholder="Senha">
+                <input type="password" name="confirmpassword" placeholder="Confirmar senha">
+    
+                <div class="actions">
+                    <button id="back-btn-2">Anterior</button>
+                    <button id="conclude-btn">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="alert hide">
+        <span class="icon-msg bi"></span>
+        <span class="msg"></span>
+        <span class="bi bi-x"></span>
+    </div>
+
+    <span id="spinner" class="d-none"></span>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
